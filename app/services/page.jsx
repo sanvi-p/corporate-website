@@ -6,6 +6,7 @@ const page = () => {
      <div>
       <div>
         {/* <img /> */}
+        <img src=''/>
         <p className='h-auto max-w-full '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, soluta. Nisi alias delectus dolorum eveniet neque rem consectetur? Iusto, quae ullam laudantium delectus accusamus dolore odit et pariatur nemo nostrum.</p>
       </div>
      </div>

@@ -14,6 +14,22 @@ export const containerVariants = (delay = 0) => ({
     }
 })
 
+
+export const titleVariants = (delay = 0) => ({
+    "offscreen":{
+        opacity:0,
+        y:30
+    },
+    "onscreen":{
+        opacity:1,
+        y:0,
+        transition:{
+            type:"spring",
+            duration:2.8,
+            delay:.4
+        }
+    }
+})
 export const tagVariants = {
     "offscreen":{
         opacity:0,
