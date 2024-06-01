@@ -42,19 +42,14 @@ const AboutComponent = () => {
             variants={tagVariants}
           
           className="px-12 pb-4 mt-4 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eos
-            hic at officiis iste. Voluptatum aut optio officiis doloremque rem
-            quod eveniet. Amet nobis repellat hic culpa esse rerum. Provident?
+           Scynaero Innovations is a top provider of IT solutions designed to meet the unique needs of various businesses. As an award-winning company, we focus on innovation and customer satisfaction, offering services in cloud computing, web app development, software development, IT infrastructure management, and IT consulting. We understand our clients' challenges and create custom solutions to boost efficiency, productivity, and growth.
           </motion.p>
           <motion.p
             initial='offscreen'
             whileInView={"onscreen"}
             variants={tagVariants}
           className="px-12 pb-4 ">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-            iusto exercitationem, totam dolorum dolore perferendis, facilis
-            consequatur sint porro sed magni eveniet quibusdam tempora
-            necessitatibus eaque odit quos eos nostrum?
+            At Scynaero, we prioritize quality and reliability in everything we do. Whether you're a small startup or a large enterprise, we have the expertise to support your IT needs. Our services include cloud solutions, cybersecurity, software development, IT infrastructure management, IT consulting, and web services. We are dedicated to building lasting partnerships with our clients through transparent communication, proactive support, and continuous innovation. Let’s use technology to drive your business forward.
           </motion.p>
         </div>
       </div>

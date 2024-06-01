@@ -2,7 +2,8 @@
 import { Input } from "../components/ui/input";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import {titleVariants, desVariants, tagVariants} from '../utils/animate'
+import {titleVariants, desVariants, tagVariants} from '../utils/animate';
+import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 export default function Fototer(){
   return (
@@ -50,11 +51,11 @@ export default function Fototer(){
             <h2 className='pb-4 text-xl font-semibold uppercase'>
                Get in Touch
             </h2>
-            <div className="flex  flex-col">
-              <Link href='/' className="PY-1 hover:underline">Instagram</Link>
-              <Link href='/' className="PY-1 hover:underline">Twitter</Link>
-              <Link href='/' className="PY-1 hover:underline">Linkedin</Link>
-              <Link href='/' className="PY-1 hover:underline">Facebook</Link>
+            <div className="flex  flex-col ">
+              <Link href='/' className="PY-1 hover:underline"><FaInstagram/> Instagram</Link>
+              <Link href='/' className="PY-1 hover:underline"> <FaTwitter/>Twitter</Link>
+              <Link href='/' className="PY-1 hover:underline"> <FaLinkedin/>Linkedin</Link>
+              <Link href='/' className="PY-1 hover:underline"><FaFacebook/>Facebook</Link>
             </div>
           </motion.div>
 

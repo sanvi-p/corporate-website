@@ -1,37 +1,40 @@
 import React from "react";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import Image from "next/image";
+import { GanttChartSquare,Blocks,Gem,Cloud, ShieldCheck, Code,Server, Lightbulb,Globe, Bug} from 'lucide-react';
 
 export default function CatalogueSection() {
   const items = [
     {
       id: "01",
-      category: "Dveloper",
+      category: "DEVELOPER" ,
       title: "Software Developer",
+      icon: <Code size={30} strokeWidth={0.8} />,
       image:
-        "https://media.licdn.com/dms/image/D5612AQGOmwfIE5mlWA/article-cover_image-shrink_720_1280/0/1674617947228?e=2147483647&v=beta&t=FTU_isQ6VYfV5D_ueFHPWvT8ZqgDeJG3yr8Mi8lpfk0",
-      description: "Lorem ipsum, dolor sit amet .",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDfjzIm7sc4y_p5s7kgjrTwGLxDQkekXLWJQ&s",
+      description: "Code Innovators.",
     },
     {
       id: "02",
-      category: "Tester",
-      title: "Software Developer",
-      image:
-        "https://media.licdn.com/dms/image/D5612AQGOmwfIE5mlWA/article-cover_image-shrink_720_1280/0/1674617947228?e=2147483647&v=beta&t=FTU_isQ6VYfV5D_ueFHPWvT8ZqgDeJG3yr8Mi8lpfk0",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      category: "TESTER",
+      icon: <Bug size={30} strokeWidth={0.8} />,
+      title: "TESTING",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6C2M28Yf0H6uE7f-FcYfpWmkVM5C8i0UQxw&s",
+      description: "Quality Guardians.",
     },
     {
       id: "03",
-      category: "Azure",
-      title: "Software Developer",
+      category: "AZURE" ,
+      title: "AZURE",
+      icon: <Cloud size={30} strokeWidth={0.8} />,
       image:
-        "https://media.licdn.com/dms/image/D5612AQGOmwfIE5mlWA/article-cover_image-shrink_720_1280/0/1674617947228?e=2147483647&v=beta&t=FTU_isQ6VYfV5D_ueFHPWvT8ZqgDeJG3yr8Mi8lpfk0",
-      description: "Lorem ipsum, dolor sit amet ews",
+        "https://media.licdn.com/dms/image/D5612AQFoXaTkwaWA3Q/article-cover_image-shrink_720_1280/0/1691502711048?e=2147483647&v=beta&t=_BA-Hv4_J_5C-JbZY_EdUAvzED41Wf6W5QARDXBYesg",
+      description: "Cloud Pioneers.",
     },
   ];
 
   return (
-    <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-1 lg:gap-0 divide-gray-300 lg:divide-x">
+    <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-1 p-5 lg:gap-0 divide-gray-300 lg:divide-x ">
       {items?.map((item) => (
         <div key={item.id} className="relative overflow-hidden group">
           <div>
@@ -46,6 +49,7 @@ export default function CatalogueSection() {
 
           <div className="absolute  top-0 p-8 bg-white text-black  bg-opacity-60 backdrop-blur m-12 ">
             <div className=" flex justify-between pb-4 ">
+              
               <p className="text-sm">{item.category}</p>
               <span className="text-sm">{item.id}</span>
             </div>
@@ -53,12 +57,13 @@ export default function CatalogueSection() {
               {item.title}
             </a>
             <p className="py-4">{item.description}</p>
-            <a href="" className="inline-flex items-center font-medium">
+            <a href="" className="inline-flex items-center font-medium hover:bg-slate-800 hover:text-white hover:rounded-lg hover:p-3">
               {" "}
               See Details <TbArrowNarrowRight className="ml-2" />
             </a>
           </div>
-          <div className="inset-0 bg-tertiary flex-col items-center justify-end md:flex  md:absolute gap-32 pb-16 text-xl transition duration-300 ease-in-out border-b-2 group-hover:translate-y-full md:border-b-0 ">
+          <div className="inset-0 bg-tertiary flex-col items-center justify-end md:flex  md:absolute gap-32 pb-10 text-xl transition duration-300 ease-in-out border-b-2 group-hover:translate-y-full md:border-b-0 ">
+          <p className="text-sm mt-24">{item.icon}</p>
             <p className="tracking-wider -rotate-90">{item.category}</p>
             <span>{item.id}</span>
           </div>
