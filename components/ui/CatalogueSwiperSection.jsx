@@ -21,7 +21,7 @@ export default function CatalogueSwiperSection() {
             variants={titleVariants}
             className="py-4  text-4xl font-medium lg:text-6xl lg:py-0"
           >
-            Modern classic
+            Explore our developer
           </motion.h1>
           <motion.h2
             initial="offscreen"
@@ -29,28 +29,18 @@ export default function CatalogueSwiperSection() {
             variants={desVariants}
             className="pb-6 text-xl font-bold tracking-wider mt-5 "
           >
-            Luxury Decoration for all{" "}
+            friendly platform for seamless integration for all employees.... {" "}
           </motion.h2>
         </div>
         <div className="grid grid-cols-2 text-gray-500 gap-x-8 ">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit
-            modi molestias libero enim doloribus nam, non omnis doloremque illum
-            fugiat quos quia illo at? Reiciendis placeat minus alias recusandae.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            quisquam, aspernatur quia laudantium sapiente nihil itaque,
-            molestiae consequatur cum voluptates, ipsa repellat aut facilis.
-            Amet mollitia deleniti doloribus nostrum assumenda!
+            At Scynaero, we're redefining the boundaries of software innovation. With a relentless commitment to cutting-edge technology, we pave the way for transformative solutions that empower businesses to thrive in the digital age. Our team of dedicated developers and engineers harness the latest advancements in artificial intelligence, machine learning, and data analytics to craft bespoke software solutions tailored to meet the unique needs of our clients. From streamlining operations to enhancing customer experiences, our innovative software offerings unlock new possibilities, driving efficiency, scalability, and sustainable growth for businesses across industries.
+
+
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit
-            modi molestias libero enim doloribus nam, non omnis doloremque illum
-            fugiat quos quia illo at? Reiciendis placeat minus alias recusandae.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            quisquam, aspernatur quia laudantium sapiente nihil itaque,
-            molestiae consequatur cum voluptates, ipsa repellat aut facilis.
-            Amet mollitia deleniti doloribus nostrum assumenda!
+            In the dynamic landscape of modern technology, adaptability is paramount. At Scynaero, we understand the importance of staying ahead of the curve. That's why we're constantly pushing the boundaries of what's possible, embracing emerging technologies and best practices to deliver software solutions that not only meet the needs of today but also anticipate the challenges of tomorrow. With a focus on agility and innovation, we empower businesses to stay competitive in an ever-evolving marketplace, providing them with the tools and expertise they need to thrive in the digital era. Join us on the forefront of software innovation and unlock the potential of tomorrow, today.
           </p>
         </div>
 
@@ -60,7 +50,7 @@ export default function CatalogueSwiperSection() {
           </Button>
         </a>
       </div>
-  
+
       {/* Swiper Section */}
       <Swiper
         slidesPerView={1}
@@ -73,7 +63,7 @@ export default function CatalogueSwiperSection() {
       >
         <SwiperSlide>
           <Image
-            src="https://img.freepik.com/premium-photo/business-growth-progress-success-concept-invest-trading-illustration_10221-11576.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaByHtPjkEXpIRvNCCe2lb9moowqRrnjERCA&s"
             alt="Swiper"
             width={520}
             height={220}
@@ -102,7 +92,7 @@ export default function CatalogueSwiperSection() {
 
         <SwiperSlide>
           <Image
-            src="https://agcdn-1d97e.kxcdn.com/wp-content/uploads/2022/08/Burrus-Growth-Gap-blog-1021x580.png"
+            src="https://media.foundit.in/career-advice/wp-content/uploads/2023/05/What-is-Professional-Development.jpg"
             alt="Swiper"
             width={520}
             height={220}

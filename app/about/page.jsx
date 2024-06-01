@@ -38,10 +38,7 @@ const page = () => {
             variants={desVariants}
             className="text-2xl text-center font-medium pb-10 mt-5 "
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            ea ipsa quas voluptas quam vitae consequuntur aliquid sit et saepe
-            ad voluptatibus quidem earum id illum, dolores veritatis dolore
-            beatae?
+            Scynaero Innovations is a leading provider of comprehensive IT solutions tailored to meet the unique needs of businesses across diverse industries. With a strong commitment to innovation and customer satisfaction, we specialize in delivering cutting-edge technology services that empower organizations to thrive in the digital age.
           </motion.p>
         </div>
       </div>
@@ -67,23 +64,12 @@ const page = () => {
           variants={tagVariants}
         >
           <p className="pb-8 tracking-wide mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            architecto et, consectetur nulla molestiae distinctio eaque enim
-            officia aperiam dolores? Soluta laudantium, laborum consectetur
-            debitis eligendi tempora alias ex culpa. <br /> <br />
+            We expertise in areas such as cloud computing, webapps development and hosting, software development, IT infrastructure management, and strategic IT consulting. We are high on understanding our client's challenges and craft customized solutions that drive efficiency, productivity, and growth. <br /> <br />
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            voluptate error nesciunt fugiat, deleniti dicta! Quas, et commodi
-            harum accusamus voluptatem est, quam id natus eaque eos cumque
-            tempore similique!
+          At Scynaero, we prioritize quality and reliability in everything we do. Whether you're a small startup looking to establish a robust IT framework or a large enterprise seeking to optimize your IT operations, we have the capabilities and experience to support your journey.
             <br /> <br />
-            <span className="text-xl font-extrabold tracking-tight ">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Reiciendis nisi illum beatae voluptatum consectetur? Quisquam,
-              itaque illo
-            </span>
           </p>
           <Button
             className="inline-flex items-center px-8 py-3 shadow-lg hover:bg-gray-800 hob
@@ -115,13 +101,13 @@ const page = () => {
           >
             <div className="p-4  text-center bg-gray-100 aspect-square dark:bg-tertiary -m-0.5  transition hover:-translate-y-3 hover:-translate-x-3 ">
               <Image
-                src="https://www.shutterstock.com/image-illustration/cloudnative-apps-technologies-approach-software-600nw-2246077495.jpg"
+                src="https://st3.depositphotos.com/1017228/37624/i/450/depositphotos_376242772-stock-photo-image-multiethnic-young-female-male.jpg"
                 width={200}
                 height={200}
                 alt=""
-                className="mx-auto rounded-full "
+                className="mx-auto rounded-[100%] "
               />
-              <h2 className="py-4 text-2xl  font-semibold uppercase">Cloud</h2>
+              <h2 className="py-4 text-2xl  font-semibold uppercase">Cybersecurity</h2>
               <p className="text-sm ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae, facere quod cum aperiam sint autem beatae eos
@@ -138,13 +124,13 @@ const page = () => {
           >
             <div className="p-4  text-center bg-gray-100 aspect-square dark:bg-tertiary -m-0.5  transition hover:-translate-y-3 hover:-translate-x-3 ">
               <Image
-                src="https://www.shutterstock.com/image-illustration/cloudnative-apps-technologies-approach-software-600nw-2246077495.jpg"
+                src="https://st2.depositphotos.com/1570716/8494/i/450/depositphotos_84945966-stock-photo-business-woman-in-front-of.jpg"
                 width={200}
                 height={200}
                 alt=""
-                className="mx-auto rounded-full "
+                className="mx-auto rounded-[100%] "
               />
-              <h2 className="py-4 text-2xl  font-semibold uppercase">Cloud</h2>
+              <h2 className="py-4 text-2xl  font-semibold uppercase">Dev</h2>
               <p className="text-sm ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae, facere quod cum aperiam sint autem beatae eos
@@ -161,13 +147,13 @@ const page = () => {
           >
             <div className="p-4  text-center bg-gray-100 aspect-square dark:bg-tertiary -m-0.5  transition hover:-translate-y-3 hover:-translate-x-3 ">
               <Image
-                src="https://www.shutterstock.com/image-illustration/cloudnative-apps-technologies-approach-software-600nw-2246077495.jpg"
+                src="https://st.depositphotos.com/1017986/3666/i/450/depositphotos_36661831-stock-photo-students-with-computer-monitor-at.jpg"
                 width={200}
                 height={200}
                 alt=""
-                className="mx-auto rounded-full "
+                className="mx-auto rounded-[100%] "
               />
-              <h2 className="py-4 text-2xl  font-semibold uppercase">Cloud</h2>
+              <h2 className="py-4 text-2xl  font-semibold uppercase">Azure</h2>
               <p className="text-sm ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae, facere quod cum aperiam sint autem beatae eos

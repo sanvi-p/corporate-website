@@ -17,11 +17,11 @@ const CompanySection = () => {
                 
                 className='mx-auto flex max-w-xs flex-col gap-y-4 '>
                   <dt className='text-white loading-7 '>
-                  Transaction for every 24  hours 
+                  Linked followers 
                   </dt>
                   <dd className='order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl '>
                     <Badge
-                    endCountNum={44}
+                    endCountNum={4}
                     endCountText='million'
                     />
                   </dd>
@@ -35,12 +35,12 @@ const CompanySection = () => {
                   
                   className='mx-auto flex max-w-xs flex-col gap-y-4 '>
                   <dt className='text-white loading-7 '>
-                  Assets under Running
+                  Projects under Running
                   </dt>
                   <dd className='order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl '>
                     <Badge
                     endCountNum={119}
-                    endCountText='trillion'
+                    endCountText='+'
                     />
                   </dd>
                 </motion.div>
@@ -53,11 +53,11 @@ const CompanySection = () => {
                    variants={tagVariants}
                    className='mx-auto flex max-w-xs flex-col gap-y-4 '>
                   <dt className='text-white loading-7 '>
-                  New Users Anually 
+                  New Employees joining  Anually 
                   </dt>
                   <dd className='order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl '>
                     <Badge
-                    endCountNum={45000}
+                    endCountNum={450}
                     endCountText='+'
                     />
                   </dd>
