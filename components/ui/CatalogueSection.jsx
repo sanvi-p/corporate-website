@@ -24,8 +24,8 @@ export default function CatalogueSection() {
     },
     {
       id: "03",
-      category: "AZURE" ,
-      title: "AZURE",
+      category: "Cloud Solutions" ,
+      title: "Cloud Solutions",
       icon: <Cloud size={30} strokeWidth={0.8} />,
       image:
         "https://media.licdn.com/dms/image/D5612AQFoXaTkwaWA3Q/article-cover_image-shrink_720_1280/0/1691502711048?e=2147483647&v=beta&t=_BA-Hv4_J_5C-JbZY_EdUAvzED41Wf6W5QARDXBYesg",

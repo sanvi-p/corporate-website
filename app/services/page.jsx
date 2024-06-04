@@ -1,5 +1,5 @@
 import React from 'react'
-import { GanttChartSquare,Blocks,Gem,Cloud, ShieldCheck, Code,Server, Lightbulb,Globe} from 'lucide-react';
+import { GanttChartSquare,Blocks,Gem,Cloud, ShieldCheck, Code,Server, Lightbulb,Globe,BarChart} from 'lucide-react';
 import    {Card, CardContent, CardDescription, CardHeader,CardTitle} from '@/components/ui/card'
 
 
@@ -11,9 +11,9 @@ const  servicesData = [
     description :"Helping businesses leverage the power of cloud platforms for scalability, agility, and cost-efficiency.",
   },
   {
-    icon : <ShieldCheck size={72} strokeWidth={0.8}/>,
-    title: 'Cybersecurity',
-    description :"Implementing robust security measures to safeguard digital assets and mitigate cyber threats.",
+    icon : <BarChart size={72} strokeWidth={0.8}/>,
+    title: 'Data Analysis',
+    description :"We offer techniques like exploratory data analysis, statistical analysis, and machine learning. Services typically offer customized solutions, visualization, consultation, and ongoing support.",
   },
   {
     icon : <Code size={72} strokeWidth={0.8}/>,
