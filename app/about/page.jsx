@@ -107,11 +107,9 @@ const page = () => {
                 alt=""
                 className="mx-auto rounded-[100%] "
               />
-              <h2 className="py-4 text-2xl  font-semibold uppercase">Cybersecurity</h2>
+              <h2 className="py-4 text-2xl  font-semibold uppercase">Data Analysis</h2>
               <p className="text-sm ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae, facere quod cum aperiam sint autem beatae eos
-                excepturi voluptate,{" "}
+              We offer techniques like exploratory data analysis, statistical analysis, and machine learning. Services typically offer customized solutions, visualization, consultation, and ongoing support.{" "}
               </p>
             </div>
           </motion.div>
@@ -132,9 +130,7 @@ const page = () => {
               />
               <h2 className="py-4 text-2xl  font-semibold uppercase">Dev</h2>
               <p className="text-sm ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae, facere quod cum aperiam sint autem beatae eos
-                excepturi voluptate,{" "}
+              Designing and developing tailored software solutions to streamline processes and enhance performance.{" "}
               </p>
             </div>
           </motion.div>
@@ -153,11 +149,9 @@ const page = () => {
                 alt=""
                 className="mx-auto rounded-[100%] "
               />
-              <h2 className="py-4 text-2xl  font-semibold uppercase">Azure</h2>
+              <h2 className="py-4 text-2xl  font-semibold uppercase">Cloud Solutions</h2>
               <p className="text-sm ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae, facere quod cum aperiam sint autem beatae eos
-                excepturi voluptate,{" "}
+              Helping businesses leverage the power of cloud platforms for scalability, agility, and cost-efficiency.{" "}
               </p>
             </div>
           </motion.div>

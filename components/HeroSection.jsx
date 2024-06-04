@@ -11,11 +11,11 @@ const HeroSection = () => {
     <div className="container py-12 xl:py-24 h-[auto] text-center lg:py-0 lg:text-left  lg:flex lg:justify-between"> 
     {/* Left section */}
       <div className="lg:w-1/2 xl:py-14 lg:py-8">
-        <motion.p
+        {/* <motion.p
         initial="offscreen"
         whileInView={"onscreen"}
         variants={titleVariants}
-         className="tracking-widest uppercase">The Best in Software Engineer</motion.p>
+         className="tracking-widest uppercase">The Best in Software Engineer</motion.p> */}
         <motion.h1
         initial='offscreen'
         whileInView={"onscreen"}
@@ -26,10 +26,7 @@ const HeroSection = () => {
        whileInView={"onscreen"}
        variants={tagVariants}
       className="pb-6 text-muted-foreground xl:pb-10">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
-        quasi quos ea fugit sapiente aperiam distinctio? Doloremque vero quas
-        deleniti est cumque dicta, perferendis nam eveniet nulla possimus esse
-        ducimus?
+       Scynaero Innovations is a leading provider of comprehensive IT solutions tailored to meet the unique needs of businesses across diverse industries. With a strong commitment to innovation and customer satisfaction, we specialize in delivering cutting-edge technology services that empower organizations to thrive in the digital age. 
       </motion.p>
 
       <motion.div

@@ -31,8 +31,8 @@ const projects = [
 const page = () => {
   return (
     <div>
-    <div className="bg-[url('https://cdn.pixabay.com/photo/2024/05/02/09/16/web-development-8734249_640.png')] bg-center bg-cover ">
-      <h1 className="cotainer py-64 text-6xl font-semibold  tracking-widest xl:text-black dark:text-white "> Our <br/> Projects</h1>
+    <div className="bg-[url('https://cdn.dribbble.com/users/1233499/screenshots/3852878/mobile-development2-2.gif')] bg-center bg-cover ">
+      <h1 className="cotainer py-64 text-6xl font-semibold  tracking-widest xl:text-black dark:text-black "> Our <br/> Projects</h1>
 
     </div>
 
