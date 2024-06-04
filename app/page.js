@@ -10,8 +10,8 @@ export default function Home() {
   return (
    <>
    <HeroSection/>
-   <CompanySection/>
-   <AboutComponent/>
+   {/* <CompanySection/> */}
+   {/* <AboutComponent/> */}
    <CatalogueSection/>
    <CatalogueSwiperSection/>
    <ContactSection/>

@@ -20,7 +20,7 @@ const HeroSection = () => {
         initial='offscreen'
         whileInView={"onscreen"}
         variants={desVariants}
-         className="h1">Make you skills like Full Stack Developer </motion.h1>
+         className="h1">Welcome Scynaero your one stop shop for IT Solutions </motion.h1>
       <motion.p 
        initial='offscreen'
        whileInView={"onscreen"}
@@ -35,7 +35,7 @@ const HeroSection = () => {
         variants={desVariants}
       >
         <Button className='inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2'>
-        Learn More <TbArrowUpRight className="w-5 h-5 ml-2"/>
+        <a href="/about">Learn More</a> <TbArrowUpRight className="w-5 h-5 ml-2"/>
       </Button>
 
       </motion.div>

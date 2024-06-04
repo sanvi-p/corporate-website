@@ -29,9 +29,20 @@ export default function Contact() {
     }));
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
+    // Check if any of the required fields are empty
+    const requiredFields = ['firstName', 'lastName', 'email', 'message'];
+    const emptyFields = requiredFields.filter(field => !formData[field]);
+  
+    if (emptyFields.length > 0) {
+      // Handle empty fields here (e.g., show an error message)
+      console.log('Please fill in all required fields.');
+      return; // Exit early if any field is empty
+    }
+  
     const response = await fetch('/api/submitForm', {
       method: 'POST',
       headers: {
@@ -39,11 +50,37 @@ export default function Contact() {
       },
       body: JSON.stringify(formData)
     });
-
+  
     // const result = await response.json();
     // console.log(result);
     // You can add further logic to handle the response here
+  
+    // Reset the form data
+    setFormData({
+      firstName: '',
+      lastName: '',
+      company: '',
+      email: '',
+      message: ''
+    });
   };
+  
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const response = await fetch('/api/submitForm', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(formData)
+  //   });
+
+  //   // const result = await response.json();
+  //   // console.log(result);
+  //   // You can add further logic to handle the response here
+  // };
 
   return (
     <div className="px-6 py-24 sm:py-32 lg:px-8 ">
@@ -88,7 +125,7 @@ export default function Contact() {
                 <span
                   aria-hidden="true"
                   className={classNames(
-                    agreed ? 'translate-x-3.5 ' : 'translate-x-0', 'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out'
+                    agreed ? 'translate-x-3.5 ' : 'translate-x-0', 'h-4 w-4 transform rounded-full bg-white  shadow-sm ring-1 ring-gray-900/5  dark:ring-black-900/5  transition duration-200 ease-in-out'
                   )}
                 />
               </Switch>
@@ -96,7 +133,7 @@ export default function Contact() {
             <Switch.Label className="text-sm leading-6 text-gray-600 ">
               By selecting this, you agree to our {' '}
               <a href="#" className="font-semibold text-primary">
-                privacy &nbsp; policy
+                privacy &nbsp;& policy
               </a>
               .
             </Switch.Label>

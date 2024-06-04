@@ -21,7 +21,7 @@ export default function CatalogueSwiperSection() {
             variants={titleVariants}
             className="py-4  text-4xl font-medium lg:text-6xl lg:py-0"
           >
-            Explore our developer
+            
           </motion.h1>
           <motion.h2
             initial="offscreen"
@@ -46,13 +46,13 @@ export default function CatalogueSwiperSection() {
 
         <a href="/gallery">
           <Button className="inline-flex items-center px-8  py-3 mt-4 text-white rounded-full shadow-lg hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2 ">
-            View more <TbArrowUpRight className="w-5  h-5 ml-2 " />
+           <a href="/about">View more </a> <TbArrowUpRight className="w-5  h-5 ml-2 " />
           </Button>
         </a>
       </div>
 
       {/* Swiper Section */}
-      <Swiper
+      {/* <Swiper
         slidesPerView={1}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 20 },
@@ -99,7 +99,7 @@ export default function CatalogueSwiperSection() {
             className="w-full"
           />
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 }
