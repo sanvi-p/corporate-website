@@ -16,7 +16,7 @@ const page = () => {
   const scale = UseTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
     <div>
-      <div className="bg-[url('https://www.shutterstock.com/shutterstock/photos/2063156102/display_1500/stock-photo-nice-to-meet-you-in-our-team-friendly-man-leader-boss-shake-hand-of-new-staff-member-welcome-young-2063156102.jpg')] bg-center bg-cover text-white ">
+      <div className="bg-[url('https://www.designsociety.org/multimedia/183da8af15aa750dd678cfa481eac34c1556811489.jpg')] bg-center bg-cover text-white ">
         <h1 className="container py-32 text-6xl font-semibold tracking-widest text-center lg:py-64 ">
           Who are we?
         </h1>
@@ -71,17 +71,17 @@ const page = () => {
           At Scynaero, we prioritize quality and reliability in everything we do. Whether you're a small startup looking to establish a robust IT framework or a large enterprise seeking to optimize your IT operations, we have the capabilities and experience to support your journey.
             <br /> <br />
           </p>
-          <Button
+          {/* <Button
             className="inline-flex items-center px-8 py-3 shadow-lg hover:bg-gray-800 hob
         ring-2 hover:ring-gray-950 ring-offset-2"
           >
             Read More <TbArrowUpRight className="w-5 h-5 ml-2 " />
-          </Button>
+          </Button> */}
         </motion.div>
       </div>
 
       {/* Team section */}
-      <div className="lg:py-20 p-10">
+      {/* <div className="lg:py-20 p-10">
         <motion.div
           initial="offscreen"
           whileInView={"onscreen"}
@@ -156,7 +156,7 @@ const page = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

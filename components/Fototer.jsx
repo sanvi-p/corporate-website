@@ -20,8 +20,8 @@ export default function Fototer() {
             </h2>
             <div className="flex  flex-col">
               <Link href='/' className="PY-1 hover:underline">About Us</Link>
-              <Link href='/' className="PY-1 hover:underline">Press</Link>
-              <Link href='/' className="PY-1 hover:underline">Careers</Link>
+              {/* <Link href='/' className="PY-1 hover:underline">Press</Link> */}
+              {/* <Link href='/' className="PY-1 hover:underline">Careers</Link> */}
               <Link href='/' className="PY-1 hover:underline">Contact</Link>
             </div>
           </motion.div>
@@ -37,8 +37,8 @@ export default function Fototer() {
             </h2>
             <div className="flex  flex-col">
               <Link href='/' className="PY-1 hover:underline">Documentation</Link>
-              <Link href='/' className="PY-1 hover:underline">Status</Link>
-              <Link href='/' className="PY-1 hover:underline">Changelog</Link>
+              {/* <Link href='/' className="PY-1 hover:underline">Status</Link> */}
+              {/* <Link href='/' className="PY-1 hover:underline">Changelog</Link> */}
               <Link href='/' className="PY-1 hover:underline">Technologies</Link>
             </div>
           </motion.div>
@@ -51,12 +51,15 @@ export default function Fototer() {
             <h2 className='pb-4 text-xl font-semibold uppercase'>
               Get in Touch
             </h2>
-            <div className="flex  flex-col ">
-              <Link href='/' className="PY-1 hover:underline"><FaInstagram /> Instagram</Link>
-              {/* <Link href='/' className="PY-1 hover:underline"> <FaTwitter />Twitter</Link> */}
-              <Link href='/' className="PY-1 hover:underline"> <FaLinkedin />Linkedin</Link>
-              {/* <Link href='/' className="PY-1 hover:underline"><FaFacebook />Facebook</Link> */}
+            <div className="flex flex-col">
+              <div className="flex items-center PY-1 hover:underline">
+                <FaInstagram /> <Link href='/' className="pl-1">Instagram</Link>
+              </div>
+              <div className="flex items-center PY-1 hover:underline">
+                <FaLinkedin /> <Link href='/' className="pl-1">Linkedin</Link>
+              </div>
             </div>
+
           </motion.div>
 
 
@@ -72,7 +75,7 @@ export default function Fototer() {
           <div className="relative lg:max-w-sm">
             <Input type="name" id="first name" placeholder="Email" />
             <button className="absolute  bg-black text-white rounded-full h-10 px-3 text-sm top-2  right-2  hover:border-2 hover:border-black hover:bg-white hover:text-black  dark:bg-primary">
-              Follow us
+              Subscribe
             </button>
           </div>
 
