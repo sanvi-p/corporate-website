@@ -47,6 +47,8 @@ const  servicesData = [
 
 const page = () => {
   return (
+
+    
       <>
       <section className='mb-12 xl:mb-36 '>
         <div className='container mx-auto'>
