@@ -21,6 +21,8 @@ export default function Contact() {
     message: ''
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -29,20 +31,39 @@ export default function Contact() {
     }));
   };
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    // Check if any of the required fields are empty
+    let valid = true;
+    const newErrors = {};
+
+    // Check required fields
     const requiredFields = ['firstName', 'lastName', 'email', 'message'];
-    const emptyFields = requiredFields.filter(field => !formData[field]);
-  
-    if (emptyFields.length > 0) {
-      // Handle empty fields here (e.g., show an error message)
-      console.log('Please fill in all required fields.');
-      return; // Exit early if any field is empty
+    requiredFields.forEach(field => {
+      if (!formData[field]) {
+        valid = false;
+        newErrors[field] = 'This field is required';
+      }
+    });
+
+    // Check email format
+    if (formData.email && !validateEmail(formData.email)) {
+      valid = false;
+      newErrors.email = 'Invalid email address';
     }
-  
+
+    setErrors(newErrors);
+
+    if (!valid) {
+      // Handle validation errors here (e.g., show error messages)
+      console.log('Please correct the highlighted errors.');
+      return; // Exit early if validation fails
+    }
+
     const response = await fetch('/api/submitForm', {
       method: 'POST',
       headers: {
@@ -50,11 +71,11 @@ export default function Contact() {
       },
       body: JSON.stringify(formData)
     });
-  
+
     // const result = await response.json();
     // console.log(result);
     // You can add further logic to handle the response here
-  
+
     // Reset the form data
     setFormData({
       firstName: '',
@@ -63,24 +84,8 @@ export default function Contact() {
       email: '',
       message: ''
     });
+    setAgreed(false);
   };
-  
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const response = await fetch('/api/submitForm', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(formData)
-  //   });
-
-  //   // const result = await response.json();
-  //   // console.log(result);
-  //   // You can add further logic to handle the response here
-  // };
 
   return (
     <div className="px-6 py-24 sm:py-32 lg:px-8 ">
@@ -93,9 +98,11 @@ export default function Contact() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="mt-2.5 ">
             <Input type="text" id="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" />
+            {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
           </div>
           <div className="mt-2.5 ">
             <Input type="text" id="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" />
+            {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
           </div>
           <div className="sm:col-span-2 ">
             <div className="mt-2.5 ">
@@ -105,11 +112,13 @@ export default function Contact() {
           <div className="sm:col-span-2 ">
             <div className="mt-2.5 ">
               <Input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="Email Address" />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
             </div>
           </div>
           <div className="sm:col-span-2 ">
             <div className="mt-2.5 ">
               <Textarea id="message" value={formData.message} onChange={handleChange} placeholder="Type your Message Here..." />
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
             </div>
           </div>
           <Switch.Group as="div">
