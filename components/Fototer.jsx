@@ -56,7 +56,7 @@ export default function Fototer() {
                 <FaInstagram /> <Link href='/' className="pl-1">Instagram</Link>
               </div>
               <div className="flex items-center PY-1 hover:underline">
-                <FaLinkedin /> <Link href='/' className="pl-1">Linkedin</Link>
+                <FaLinkedin /> <Link href='/' className="pl-1">LinkedIn</Link>
               </div>
             </div>
 

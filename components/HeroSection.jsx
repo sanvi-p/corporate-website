@@ -20,7 +20,7 @@ const HeroSection = () => {
         initial='offscreen'
         whileInView={"onscreen"}
         variants={desVariants}
-         className="h1">Welcome Scynaero your one stop shop for IT Solutions </motion.h1>
+         className="h1">Welcome to Scynaero your one stop shop for IT Solutions </motion.h1>
       <motion.p 
        initial='offscreen'
        whileInView={"onscreen"}

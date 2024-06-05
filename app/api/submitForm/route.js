@@ -8,6 +8,8 @@ export async function POST(request) {
 
     console.log('Attempting to connect to database...');
 
+
+    
     const formSubmission = await prisma.formSubmission.create({
       data: {
         firstName,
