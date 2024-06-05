@@ -18,7 +18,7 @@ const  servicesData = [
   },
   {
     icon : <Smartphone size={72} strokeWidth={0.8}/>,
-    title: 'Mobile application development (Android and IOS)',
+    title: 'Mobile Application Development (Android and IOS)',
     description :" Mobile app development for Android and iOS involves creating and launching apps using tools like Android Studio and Xcode. Developers design these apps to meet each platform's guidelines and provide a good user experience",
   },
 
@@ -39,7 +39,7 @@ const  servicesData = [
   },
   {
     icon : <ShoppingBag size={72} strokeWidth={0.8}/>,
-    title: 'IT asset procurement',
+    title: 'IT Asset Procurement',
     description :"IT asset procurement involves acquiring and managing technology resources for a company's operations. It includes purchasing hardware and software, as well as maintaining and upgrading existing assets.",
   },
   
