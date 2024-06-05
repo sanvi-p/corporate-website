@@ -5,11 +5,7 @@ import    {Card, CardContent, CardDescription, CardHeader,CardTitle} from '@/com
 
 
 const  servicesData = [
-  {
-    icon : <Cloud size={72} strokeWidth={0.8}/>,
-    title: 'Cloud Solutions',
-    description :"Helping businesses leverage the power of cloud platforms for scalability, agility, and cost-efficiency.",
-  },
+ 
   {
     icon : <BarChart size={72} strokeWidth={0.8}/>,
     title: 'Data Analysis',
