@@ -2,13 +2,14 @@ import React from "react";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import Image from "next/image";
 import { GanttChartSquare,Blocks,Gem,Cloud, ShieldCheck, Code,Server, Lightbulb,Globe, Bug} from 'lucide-react';
+import Link from "next/link";
 
 export default function CatalogueSection() {
   const items = [
     {
       id: "01",
-      category: "DEVELOPER" ,
-      title: "Software Developer",
+      category: "IT Consulting" ,
+      title: "IT Consulting",
       icon: <Code size={30} strokeWidth={0.8} />,
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDfjzIm7sc4y_p5s7kgjrTwGLxDQkekXLWJQ&s",
@@ -57,10 +58,10 @@ export default function CatalogueSection() {
               {item.title}
             </a>
             <p className="py-4">{item.description}</p>
-            <a href="" className="inline-flex items-center font-medium hover:bg-slate-800 hover:text-white hover:rounded-lg hover:p-3">
+            <Link href="/services" className="inline-flex items-center font-medium hover:bg-slate-800 hover:text-white hover:rounded-lg hover:p-3">
               {" "}
               See Details <TbArrowNarrowRight className="ml-2" />
-            </a>
+            </Link>
           </div>
           <div className="inset-0 bg-tertiary flex-col items-center justify-end md:flex  md:absolute gap-32 pb-10 text-xl transition duration-300 ease-in-out border-b-2 group-hover:translate-y-full md:border-b-0 ">
           <p className="text-sm mt-24">{item.icon}</p>

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 //Components
-import Logo from "./Logo";
+import Logoone from "./Logo";
 import Nav from "./Nav";
 import MobileNavigation from "./MobileNavigation";
 import { usePathname } from "next/navigation";
@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
             {/* LOgo section */}
-           <Logo/>
+           <Logoone/>
           <div className="flex items-center gap-x-6">
             {/* Nav Section */}
               <Nav conatainerStyles='hidden xl:flex gap-x-8 items-center '

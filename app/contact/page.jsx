@@ -22,6 +22,7 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
+  const [showThankYou, setShowThankYou] = useState(false); // State for controlling the popup
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -76,6 +77,9 @@ export default function Contact() {
     // console.log(result);
     // You can add further logic to handle the response here
 
+    // Show the thank you message
+    setShowThankYou(true);
+
     // Reset the form data
     setFormData({
       firstName: '',
@@ -85,6 +89,11 @@ export default function Contact() {
       message: ''
     });
     setAgreed(false);
+
+    // Hide the thank you message after a delay
+    setTimeout(() => {
+      setShowThankYou(false);
+    }, 3000); // Hide after 3 seconds
   };
 
   return (
@@ -142,7 +151,7 @@ export default function Contact() {
             <Switch.Label className="text-sm leading-6 text-gray-600 ">
               By selecting this, you agree to our {' '}
               <a href="#" className="font-semibold text-primary">
-                privacy &nbsp;& policy
+                privacy & policy
               </a>
               .
             </Switch.Label>
@@ -154,6 +163,17 @@ export default function Contact() {
           </div>
         </div>
       </form>
+
+      {/* Popup */}
+      {showThankYou && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out">
+          <div className="bg-primary  p-8 rounded shadow-lg transform transition-transform duration-300 ease-in-out scale-95 opacity-0 animate-popup">
+            <h2 className="text-2xl font-bold mb-4">Thank You!</h2>
+            <p className="mb-4">Your message has been sent successfully.</p>
+            {/* <Button onClick={() => setShowThankYou(false)} className="mt-4 px-4 py-2 bg-primary text-white rounded">Close</Button> */}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
