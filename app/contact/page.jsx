@@ -151,7 +151,7 @@ export default function Contact() {
             <Switch.Label className="text-sm leading-6 text-gray-600 ">
               By selecting this, you agree to our {' '}
               <a href="#" className="font-semibold text-primary">
-                privacy & policy
+                Privacy Policy
               </a>
               .
             </Switch.Label>
