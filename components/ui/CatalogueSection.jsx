@@ -20,7 +20,7 @@ export default function CatalogueSection() {
       category: "Mobile Applications",
       icon: <Bug size={30} strokeWidth={0.8} />,
       title: "Mobile Application Development (Android and IOS)",
-      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6C2M28Yf0H6uE7f-FcYfpWmkVM5C8i0UQxw&s",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7ZsWkjINFhhWUAiZW89b2Szahx2E-F1mQeboieAX9utSdvjuobq3RXNq6lbVAoVYMKc&usqp=CAU",
       description: "Quality Guardians.",
     },
     {
@@ -29,7 +29,7 @@ export default function CatalogueSection() {
       title: "Digital Marketing",
       icon: <Cloud size={30} strokeWidth={0.8} />,
       image:
-        "https://media.licdn.com/dms/image/D5612AQFoXaTkwaWA3Q/article-cover_image-shrink_720_1280/0/1691502711048?e=2147483647&v=beta&t=_BA-Hv4_J_5C-JbZY_EdUAvzED41Wf6W5QARDXBYesg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hy5Fazc31pHxjxB3e8RN1z5VhecgIJTE-7qRqJNAai7ayW3t974rfd8oGnP5JEfxVp4&usqp=CAU",
       description: "marketing strategies.",
     },
   ];
