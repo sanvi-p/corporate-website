@@ -48,6 +48,8 @@ export default function CatalogueSection() {
             />
           </div>
 
+          
+
           <div className="absolute  top-0 p-8 bg-white text-black  bg-opacity-60 backdrop-blur m-12 ">
             <div className=" flex justify-between pb-4 ">
               
