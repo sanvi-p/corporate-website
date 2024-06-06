@@ -19,10 +19,10 @@ export default function Fototer() {
               Quick Links
             </h2>
             <div className="flex  flex-col">
-              <Link href='/' className="PY-1 hover:underline">About Us</Link>
+              <Link href='/about' className="PY-1 hover:underline">About Us</Link>
               {/* <Link href='/' className="PY-1 hover:underline">Press</Link> */}
               {/* <Link href='/' className="PY-1 hover:underline">Careers</Link> */}
-              <Link href='/' className="PY-1 hover:underline">Contact</Link>
+              <Link href='/contact' className="PY-1 hover:underline">Contact</Link>
             </div>
           </motion.div>
 
@@ -52,11 +52,11 @@ export default function Fototer() {
               Get in Touch
             </h2>
             <div className="flex flex-col">
-              <div className="flex items-center PY-1 hover:underline">
+              {/* <div className="flex items-center PY-1 hover:underline">
                 <FaInstagram /> <Link href='/' className="pl-1">Instagram</Link>
-              </div>
+              </div> */}
               <div className="flex items-center PY-1 hover:underline">
-                <FaLinkedin /> <Link href='/' className="pl-1">LinkedIn</Link>
+                <FaLinkedin /> <Link href='https://www.linkedin.com/company/scynaero' className="pl-1" target="_blank">LinkedIn</Link>
               </div>
             </div>
 
@@ -75,7 +75,7 @@ export default function Fototer() {
           <div className="relative lg:max-w-sm">
             <Input type="name" id="first name" placeholder="Email" />
             <button className="absolute  bg-black text-white rounded-full h-10 px-3 text-sm top-2  right-2  hover:border-2 hover:border-black hover:bg-white hover:text-black  dark:bg-primary">
-              Subscribe
+            <a href="https://www.linkedin.com/company/scynaero" target="_blank">  Subscribe</a>
             </button>
           </div>
 

@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import {TbArrowUpRight} from 'react-icons/tb'
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {titleVariants, desVariants, tagVariants} from '../utils/animate'
 
 const HeroSection = () => {
@@ -35,7 +36,7 @@ const HeroSection = () => {
         variants={desVariants}
       >
         <Button className='inline-flex items-center px-8 py-3 text-white rounded-full shadow-lg hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2'>
-        <a href="/about">Learn More</a> <TbArrowUpRight className="w-5 h-5 ml-2"/>
+        <Link href="/about">Learn More</Link> <TbArrowUpRight className="w-5 h-5 ml-2"/>
       </Button>
 
       </motion.div>
