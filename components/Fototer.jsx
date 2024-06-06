@@ -39,7 +39,7 @@ export default function Fototer() {
               <Link href='/' className="PY-1 hover:underline">Documentation</Link>
               {/* <Link href='/' className="PY-1 hover:underline">Status</Link> */}
               {/* <Link href='/' className="PY-1 hover:underline">Changelog</Link> */}
-              <Link href='/' className="PY-1 hover:underline">Technologies</Link>
+              <Link href='/services' className="PY-1 hover:underline">Technologies</Link>
             </div>
           </motion.div>
 
