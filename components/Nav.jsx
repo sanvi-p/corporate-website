@@ -1,43 +1,43 @@
-
-//Hooks
+// Hooks
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
 const links = [
-    {path:'/', name:'home'},
-    {path:'/about', name:'about'},
-    {path:'/services', name:'services'},
-    // {path:'/projects', name:'projects'},
-    {path:'/contact', name:'contact'}
-]
+  { path: '/', name: 'home' },
+  { path: '/about', name: 'about' },
+  { path: '/services', name: 'services' },
+  // { path: '/projects', name: 'projects' },
+  { path: '/contact', name: 'contact' }
+];
 
-const Nav = ({conatainerStyles, linkStyles, underlineStyles}) => {
-    const path = usePathname()
+const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
+  const path = usePathname();
   return (
-  <nav className={`${conatainerStyles}`}>
-    {
-        links.map((link, index) =>{
-            return (
-                <Link href={link.path} key={index} className={`uppercase ${linkStyles}`}>
-                    {link.path === path && (
-                        <motion.span
-                        initial = {{y:'-100%'}}
-                        animate = {{y:0}}
-                        transition={{type: 'tween'}}
-                        layoutId="underline"
-                        className={`${underlineStyles}`}
-                        />
-                    )}
-                    {link.name}
-                </Link>
-            )
-        })
-    }
+    <nav className={`${containerStyles}`}>
+      {
+        links.map((link, index) => (
+          <Link 
+            href={link.path} 
+            key={index} 
+            className={`uppercase ${linkStyles}`} 
+            onClick={onLinkClick}
+          >
+            {link.path === path && (
+              <motion.span
+                initial={{ y: '-100%' }}
+                animate={{ y: 0 }}
+                transition={{ type: 'tween' }}
+                layoutId="underline"
+                className={`${underlineStyles}`}
+              />
+            )}
+            {link.name}
+          </Link>
+        ))
+      }
+    </nav>
+  );
+};
 
-  </nav>
-  )
-}
-
-export default Nav
+export default Nav;
