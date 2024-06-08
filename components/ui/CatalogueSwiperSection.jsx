@@ -30,7 +30,7 @@ export default function CatalogueSwiperSection() {
             variants={desVariants}
             className="pb-6 text-xl font-bold tracking-wider mt-5 "
           >
-            friendly platform for seamless integration to all employees.... {" "}
+            {/* friendly platform for seamless integration to all employees.... {" "} */}
           </motion.h2>
         </div>
         <div className="grid grid-cols-2 text-gray-500 gap-x-8 ">

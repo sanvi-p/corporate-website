@@ -30,7 +30,7 @@ const Header = () => {
            <Logoone/>
           <div className="flex items-center gap-x-6">
             {/* Nav Section */}
-              <Nav conatainerStyles='hidden xl:flex gap-x-8 items-center '
+              <Nav conatainerStyles='hidden xl:flex sm:none gap-x-8 items-center '
               linkStyles='relative hover:text-primary transition-all'
               underlineStyles='absolute  left-0 top-full  h-[2px]  bg-primary w-full'
               />

@@ -9,7 +9,7 @@ const  servicesData = [
   {
     icon : <BarChart size={72} strokeWidth={0.8}/>,
     title: 'Data Analysis',
-    description :"IT asset procurement involves acquiring and managing technology resources for a company's operations. It includes purchasing hardware and software, as well as maintaining and upgrading existing assets.",
+    description :" We offer techniques like exploratory data analysis,statistical analysis,and machine learning.Services typically offer customized solutions,visualization,consultation, and ongoing support.",
   },
   {
     icon : <Code size={72} strokeWidth={0.8}/>,
@@ -19,7 +19,7 @@ const  servicesData = [
   {
     icon : <Smartphone size={72} strokeWidth={0.8}/>,
     title: 'Mobile Application Development (Android and IOS)',
-    description :" Mobile app development for Android and iOS involves creating and launching apps using tools like Android Studio and Xcode. Developers design these apps to meet each platform's guidelines and provide a good user experience",
+    description :" Mobile app development for Android and iOS involves creating and launching apps using tools like Android Studio and Xcode.",
   },
 
   {
@@ -35,12 +35,12 @@ const  servicesData = [
   {
     icon : <Megaphone size={72} strokeWidth={0.8}/>,
     title: 'Digital Marketing',
-    description :" Digital marketing uses the internet to promote products and connect with customers. It includes social media, search engines, email, and content creation. Analyzing data helps improve marketing strategies. Staying current with trends is essential for success.",
+    description :" Digital marketing uses the internet to promote products and connect with customers. It includes social media, search engines, email, and content creation.  ",
   },
   {
     icon : <ShoppingBag size={72} strokeWidth={0.8}/>,
     title: 'IT Asset Procurement',
-    description :"IT asset procurement involves acquiring and managing technology resources for a company's operations. It includes purchasing hardware and software, as well as maintaining and upgrading existing assets.",
+    description :"IT asset procurement involves acquiring and managing technology resources for a company's operations. It includes purchasing hardware and software.",
   },
   
 ]
