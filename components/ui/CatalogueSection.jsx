@@ -19,9 +19,9 @@ export default function CatalogueSection() {
       id: "02",
       category: "Mobile Applications",
       icon: <Bug size={30} strokeWidth={0.8} />,
-      title: "Mobile Application Development (Android and IOS)",
+      title: "Mobile Application ",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7ZsWkjINFhhWUAiZW89b2Szahx2E-F1mQeboieAX9utSdvjuobq3RXNq6lbVAoVYMKc&usqp=CAU",
-      description: "Quality Guardians.",
+      description: "Mobile Views.",
     },
     {
       id: "03",
@@ -67,8 +67,8 @@ export default function CatalogueSection() {
           </div>
           <div className="inset-0 bg-tertiary flex-col items-center justify-end md:flex  md:absolute gap-32 pb-10 text-xl transition duration-300 ease-in-out border-b-2 group-hover:translate-y-full md:border-b-0 ">
           <p className="text-sm mt-24">{item.icon}</p>
-            <p className="tracking-wider -rotate-90">{item.category}</p>
-            <span>{item.id}</span>
+            <p className="tracking-wider ">{item.category}</p>
+            {/* <span>{item.id}</span> */}
           </div>
         </div>
       ))}

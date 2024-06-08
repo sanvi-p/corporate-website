@@ -1,11 +1,10 @@
 'use client';
-
+import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "../../components/ui/input";
 import { Switch } from "@headlessui/react";
 import { Button } from "@/components/ui/button";
 import { TbArrowUpRight } from "react-icons/tb";
-import { useState } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -22,7 +21,7 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
-  const [showThankYou, setShowThankYou] = useState(false); // State for controlling the popup
+  const [showThankYou, setShowThankYou] = useState(false); 
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -41,8 +40,7 @@ export default function Contact() {
     e.preventDefault();
     let valid = true;
     const newErrors = {};
-
-    // Check required fields
+  
     const requiredFields = ['firstName', 'lastName', 'email', 'message'];
     requiredFields.forEach(field => {
       if (!formData[field]) {
@@ -50,51 +48,56 @@ export default function Contact() {
         newErrors[field] = 'This field is required';
       }
     });
-
-    // Check email format
+  
     if (formData.email && !validateEmail(formData.email)) {
       valid = false;
       newErrors.email = 'Invalid email address';
     }
-
+  
     setErrors(newErrors);
-
+  
     if (!valid) {
-      // Handle validation errors here (e.g., show error messages)
-      console.log('Please correct the highlighted errors.');
-      return; // Exit early if validation fails
+      return;
     }
-
-    const response = await fetch('/api/submitForm', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
-
-    // const result = await response.json();
-    // console.log(result);
-    // You can add further logic to handle the response here
-
-    // Show the thank you message
-    setShowThankYou(true);
-
-    // Reset the form data
-    setFormData({
-      firstName: '',
-      lastName: '',
-      company: '',
-      email: '',
-      message: ''
-    });
-    setAgreed(false);
-
-    // Hide the thank you message after a delay
-    setTimeout(() => {
-      setShowThankYou(false);
-    }, 3000); // Hide after 3 seconds
+  
+    try {
+      const response = await fetch('/corporate-website/api/submitForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      // Show the thank you message
+      setShowThankYou(true);
+  
+      // Reset the form data after submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        company: '',
+        email: '',
+        message: ''
+      });
+      setAgreed(false);
+  
+      // Hide the thank you message after a delay
+      setTimeout(() => {
+        setShowThankYou(false);
+      }, 3000); // Hide after 3 seconds
+  
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+    }
   };
+  
+  
+  
 
   return (
     <div className="px-6 py-24 sm:py-32 lg:px-8 ">
@@ -163,7 +166,6 @@ export default function Contact() {
           </div>
         </div>
       </form>
-
       {/* Popup */}
       {showThankYou && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out">
@@ -175,5 +177,5 @@ export default function Contact() {
         </div>
       )}
     </div>
-  )
+  );
 }

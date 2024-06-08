@@ -30,7 +30,7 @@ const page = () => {
             variants={titleVariants}
             className="text-3xl font-semibold text-center lg:p-10 lg:text-5xl "
           >
-            We have great skill development technologies{" "}
+            {/* We have great skill development technologies{" "} */}
           </motion.h2>
           <motion.p
             initial="offscreen"
