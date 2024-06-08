@@ -7,6 +7,8 @@ import Nav from "./Nav"; // Import Nav component
 import MobileNavigation from "./MobileNavigation";
 import { usePathname } from "next/navigation";
 
+
+
 const Header = () => {
   const [header, setHeader] = useState(false);
   const pathname = usePathname();
