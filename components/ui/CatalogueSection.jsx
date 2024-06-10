@@ -1,7 +1,7 @@
 import React from "react";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import Image from "next/image";
-import { GanttChartSquare,Blocks,Gem,Cloud, ShieldCheck, Code,Server, Lightbulb,Globe, Bug} from 'lucide-react';
+import { GanttChartSquare,Blocks,CircleDollarSign,Gem,Cloud,TabletSmartphone, ShieldCheck, Code,Server, Lightbulb,Globe, Bug} from 'lucide-react';
 import Link from "next/link";
 
 export default function CatalogueSection() {
@@ -16,9 +16,10 @@ export default function CatalogueSection() {
       description: "Code Innovators.",
     },
     {
+      
       id: "02",
       category: "Mobile Applications",
-      icon: <Bug size={30} strokeWidth={0.8} />,
+      icon: <TabletSmartphone size={30} strokeWidth={0.8} />,
       title: "Mobile Application ",
       image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA7ZsWkjINFhhWUAiZW89b2Szahx2E-F1mQeboieAX9utSdvjuobq3RXNq6lbVAoVYMKc&usqp=CAU",
       description: "Mobile Views.",
@@ -27,7 +28,7 @@ export default function CatalogueSection() {
       id: "03",
       category: "Digital Marketing" ,
       title: "Digital Marketing",
-      icon: <Cloud size={30} strokeWidth={0.8} />,
+      icon: <CircleDollarSign size={30} strokeWidth={0.8} />,
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Hy5Fazc31pHxjxB3e8RN1z5VhecgIJTE-7qRqJNAai7ayW3t974rfd8oGnP5JEfxVp4&usqp=CAU",
       description: "marketing strategies.",
