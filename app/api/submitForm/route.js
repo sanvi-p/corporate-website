@@ -5,7 +5,7 @@ import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
 import { v4 as uuidv4 } from 'uuid';
 
-const client = new DynamoDBClient({ region: process.env.AWS_REGION });
+const client = new DynamoDBClient({ region: 'us-east-2'});
 const dynamoDb = DynamoDBDocumentClient.from(client);
 const TABLE_NAME = 'Contacts'; // Replace with your DynamoDB table name
 
