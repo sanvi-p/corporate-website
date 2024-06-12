@@ -5,11 +5,6 @@ import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
 import { v4 as uuidv4 } from 'uuid';
 
-// Print all environment variables
-console.log("Environment Variables:");
-for (let key in process.env) {
-    console.log(`${key}: ${process.env[key]}`);
-}
 
 // Function to get AWS credentials from GitHub Actions context
 function getAwsCredentials() {
@@ -24,7 +19,47 @@ function getAwsCredentials() {
   
   return { token, accessKeyId, secretAccessKey, region };
 }
+//////////////////////////
+const client = new DynamoDBClient({
+      region: process.env.AWS_REGION,
+      credentials: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID ,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY ,
+        sessionToken: process.env.AWS_SESSION_TOKEN
+      }
+    };
 
+
+const dynamoDb = DynamoDBDocumentClient.from(client);
+const TABLE_NAME = 'Contacts';
+
+async function addContact(contact){
+    const response = await dynamoDB.send(new PutCommand({
+    TableName: TABLE_NAME,
+      Item: {
+        id: uuidv4(), // Generate a unique ID for each entry
+        firstName,
+        lastName,
+        company,
+        email,
+        message,
+        createdAt: new Date().toISOString(),
+      }, 
+    }))
+    console.log(response.Items)
+};
+
+const contact = {
+    id: uuidv4(), // Generate a unique ID for each entry
+    firstName: "ramesh",
+    lastName: "suresh",
+    company: "Tesla",
+    email: "ramesh@gmail.com",
+    message: "How are you suresh. I have not seen you yesterday.",
+    createdAt: new Date().toISOString(),
+        
+}
+///////////////////////////////////////
 export async function POST(req) {
   try {
     const { firstName, lastName, company, email, message } = await req.json();
@@ -64,3 +99,5 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Error saving data' }, { status: 500 });
   }
 }
+
+addContact(contact)
