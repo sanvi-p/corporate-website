@@ -5,6 +5,12 @@ import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
 import { v4 as uuidv4 } from 'uuid';
 
+// Print all environment variables
+console.log("Environment Variables:");
+for (let key in process.env) {
+    console.log(`${key}: ${process.env[key]}`);
+}
+
 // Function to get AWS credentials from GitHub Actions context
 function getAwsCredentials() {
   const token = process.env.AWS_SESSION_TOKEN;
