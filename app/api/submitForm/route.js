@@ -27,7 +27,7 @@ const client = new DynamoDBClient({
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY ,
         sessionToken: process.env.AWS_SESSION_TOKEN
       }
-    },
+    });
 
 
 const dynamoDb = DynamoDBDocumentClient.from(client);
