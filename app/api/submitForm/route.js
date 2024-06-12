@@ -34,7 +34,7 @@ const dynamoDb = DynamoDBDocumentClient.from(client);
 const TABLE_NAME = 'Contacts';
 
 async function addContact(contact){
-    const response = await dynamoDB.send(new PutCommand({
+    const response = await dynamoDb.send(new PutCommand({
     TableName: TABLE_NAME,
       Item: {
         id: uuidv4(), // Generate a unique ID for each entry
