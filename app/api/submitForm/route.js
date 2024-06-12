@@ -36,15 +36,7 @@ const TABLE_NAME = 'Contacts';
 async function addContact(contact){
     const response = await dynamoDb.send(new PutCommand({
     TableName: TABLE_NAME,
-      Item: {
-        id: uuidv4(), // Generate a unique ID for each entry
-        firstName,
-        lastName,
-        company,
-        email,
-        message,
-        createdAt: new Date().toISOString(),
-      }, 
+    Item: contact
     }))
     console.log(response.Items)
 };
