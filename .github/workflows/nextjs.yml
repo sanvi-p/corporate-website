@@ -28,11 +28,12 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env: 
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_REGION: ${{ secrets.AWS_REGION }}
     steps:
+      - name: Configure AWS Credentials
+        uses:  aws-actions/configure-aws-credentials@v2
+        with: 
+          aws-region: us-east-2
+          role-to-assume: arn:aws:iam::767397726623:role/github-aws-dynamodb
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
