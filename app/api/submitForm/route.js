@@ -43,11 +43,11 @@ async function addContact(contact){
 
 const contact = {
     id: uuidv4(), // Generate a unique ID for each entry
-    firstName: "ramesh",
-    lastName: "suresh",
-    company: "Tesla",
-    email: "ramesh@gmail.com",
-    message: "How are you suresh. I have not seen you yesterday.",
+    firstName: "lokesh",
+    lastName: "mahesh",
+    company: "thales",
+    email: "lokesh@gmail.com",
+    message: "test content.",
     createdAt: new Date().toISOString(),
         
 }
@@ -55,6 +55,15 @@ const contact = {
 export async function POST(req) {
   try {
     const { firstName, lastName, company, email, message } = await req.json();
+    const inputdata = {
+        id: uuidv4(), // Generate a unique ID for each entry
+        firstName,
+        lastName,
+        company,
+        email,
+        message,
+        createdAt: new Date().toISOString(),
+    };
     
     // Retrieve AWS credentials from GitHub Actions context
     const { token, accessKeyId, secretAccessKey, region } = getAwsCredentials();
@@ -73,17 +82,9 @@ export async function POST(req) {
     
     const params = {
       TableName: TABLE_NAME,
-      Item: {
-        id: uuidv4(), // Generate a unique ID for each entry
-        firstName,
-        lastName,
-        company,
-        email,
-        message,
-        createdAt: new Date().toISOString(),
-      },
+      Item: inputdata
     };
-
+    
     await dynamoDb.send(new PutCommand(params));
     return NextResponse.json({ message: 'Data saved successfully!' });
   } catch (error) {
